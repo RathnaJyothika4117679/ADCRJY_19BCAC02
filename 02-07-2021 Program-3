@@ -1,0 +1,36 @@
+import java.util.*;
+ class factorial
+{
+public static void main(String[] args) 
+    {
+Scanner s=new Scanner(System.in);
+     int p=s.nextInt();
+
+    for(int i=1;i<=p;i++)
+{
+int n=s.nextInt();
+      int factorial=1;
+      for(int j=n;j>=1;j--)
+ {
+    factorial*=j;
+     }
+   System.out.println(factorial);
+    }
+   p--;
+  }
+}
+
+
+OUTPUT:
+D:\jyothi>javac factorial1.java
+
+D:\jyothi>java factorial
+9
+6
+720
+4
+24
+5
+120
+8
+40320

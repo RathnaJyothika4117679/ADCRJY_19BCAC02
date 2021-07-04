@@ -1,15 +1,7 @@
 import java.util.*;
 class automorphic
 {
-  D:\jyothi>java automorphic
-Enter no:
-6
-6is automorphic number
 
-D:\jyothi>java automorphic
-Enter no:
-19
-19is not automorphic number
 public static void main(String args[])
   {
    Scanner in=new Scanner(System.in);

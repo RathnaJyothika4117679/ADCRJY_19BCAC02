@@ -1,0 +1,52 @@
+//LENGTH OF THE STRING WITH AND WITHOUT SPACES
+import java.util.*;
+import java.io.*;
+class strspace
+{
+ public static void main(String[] args)throws Exception
+ {
+        BufferedReader in=new BufferedReader(new InputStreamReader(System.in));
+	String s;
+	System.out.println("Enter the String:");
+        s=in.readLine();	
+	
+	System.out.println("Length of the String: "+s.length());
+		
+	
+	System.out.println("Length of String without spaces: "+s.replace(" ", "").length());
+   }
+}
+
+
+OUTPUT:
+D:\jyothi>javac strspace.java
+
+D:\jyothi>java strspace
+Enter the String:
+Rathna Jyothika
+Length of the String: 15
+Length of String without spaces: 14
+
+D:\jyothi>java strspace
+Enter the String:
+Hii!This is Jyothika from Coding Class
+Length of the String: 38
+Length of String without spaces: 33
+
+D:\jyothi>java strspace
+Enter the String:
+jyothika
+Length of the String: 8
+Length of String without spaces: 8
+
+D:\jyothi>java strspace
+Enter the String:
+GADIYAKARI RATHNA JYOTHIKA
+Length of the String: 26
+Length of String without spaces: 24
+
+D:\jyothi>java strspace
+Enter the String:
+all the best
+Length of the String: 13
+Length of String without spaces: 10

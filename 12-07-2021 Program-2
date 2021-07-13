@@ -1,0 +1,38 @@
+//REVERSE THE SENTENCE AND IN BETWEEN THE WORDS PUT SPECIAL OPERATOR
+import java.io.*;
+
+class rsstr
+{
+    public static void main(String args[]) throws Exception
+    {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+        System.out.print("Enter sentence : ");
+        String s = br.readLine();
+
+        String n[] = s.split("  ");
+        System.out.println("Reverse Sentence : ");
+        for (int i = n.length - 1; i >= 0; i--)
+        {
+            System.out.print(n[i] + ".");
+        }
+    }
+}
+
+
+OUTPUT:
+
+D:\jyothi>javac rsstr.java
+
+D:\jyothi>java rsstr
+Enter sentence : i like java
+Reverse Sentence :
+java.like.i.
+D:\jyothi>java rsstr
+Enter sentence : welcome to java
+Reverse Sentence :
+java.to.welcome.
+D:\jyothi>java rsstr
+Enter sentence : welcome to coding class
+Reverse Sentence :
+class.coding.to.welcome.

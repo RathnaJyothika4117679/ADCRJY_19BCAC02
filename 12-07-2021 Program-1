@@ -1,0 +1,50 @@
+//CONVERT EVERY STARTING WORD INTO CAPTIAL WORD IN A STRING
+import java.io.*;
+class cfwstr
+{
+ static String convert(String s)
+ {
+  char c[] = s.toCharArray();
+  for (int i = 0; i < s.length(); i++) 
+  {
+   if (i == 0 && c[i] != ' ' || c[i] != ' ' && c[i - 1] == ' ') 
+   {
+     if (c[i] >= 'a' && c[i] <= 'z')
+    {
+     c[i] = (char)(c[i] - 'a' + 'A');
+    }
+   }
+   else if (c[i] >= 'A' && c[i] <= 'Z') 
+   c[i] = (char)(c[i] + 'a' - 'A');            
+  }
+  String st = new String(c);
+  return st;
+ }
+ public static void main(String args[])throws Exception
+ {
+  BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+  String s;
+  System.out.println("Enter the sentence:");
+  s=br.readLine();
+  System.out.println(convert(s));
+ }
+}
+
+
+OUTPUT:
+D:\jyothi>javac cfwstr.java
+
+D:\jyothi>java cfwstr
+Enter the sentence:
+this is coding class
+This Is Coding Class
+
+D:\jyothi>java cfwstr
+Enter the sentence:
+sun rises in the east
+Sun Rises In The East
+
+D:\jyothi>java cfwstr
+Enter the sentence:
+this is rathna jyothika
+This Is Rathna Jyothika

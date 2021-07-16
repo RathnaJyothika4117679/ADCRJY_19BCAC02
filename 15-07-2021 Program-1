@@ -46,3 +46,4 @@ class Main
 		System.out.println("Sorted array list:"+a);
 		
 	}
+}

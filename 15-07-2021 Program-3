@@ -1,21 +1,21 @@
-class Solution 
-{
+class Solution {
     public int[] sortArrayByParityII(int[] nums) {
-        Stack<Integer> evenStack = new Stack<>();
-        Stack<Integer> oddStack = new Stack<>();
-        
-        for (int i : nums) {
-            if (i % 2 == 0) {
-                evenStack.push(i);
-            } else {
-                oddStack.push(i);
-            }
+       int oddindex = 1;
+   int evenindex = 0;
+   int res[] = new int[nums.length];
+    for (int i = 0; i < nums.length; i++)
+
+    {
+        if (nums[i]%2==0) {
+            res[evenindex]=nums[i];
+            evenindex+=2;
         }
-        
-        for (int i = 0; i < nums.length; i++) {
-            nums[i] = i % 2 == 0 ? evenStack.pop() : oddStack.pop();
+        else
+        {
+            res[oddindex]=nums[i];
+            oddindex+=2;
         }
-        
-        return nums;
+    }
+    return res;
     }
 }
